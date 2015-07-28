@@ -7,22 +7,30 @@ $(function() {
 	currentUser = '',
 	REPLY_BUTTON_CLASS = 'reply-button';
 
-	// Grab discussions data from the local json file
+	/**
+	 * Grab discussions data from the local json file
+	 * @param {string} source the path of json file to load
+	 * @parm {Function} callback function to call when data is loaded
+	 */
 	function loadTopics(source, callback) {
 		$.getJSON(source,function(result){
 			callback(result.topics);
 		});
 	}
 
-	// Display nested comments on index page
+	/**
+	 * Loop over topics and display the nested comments for each topic on the index page
+	 * @param {Array.<Object>} topics an array of topics to display
+	 */
 	function displayTopics(topics) {
 		$.each(topics, function(i, topic){
+			var topicEl, titleEl, responses;
 			// Create a discussion division to add the topic and responses to it
-			var topicEl = $('<div/>', {
+			topicEl = $('<div/>', {
 		    class: 'topic-container'
-			}),
+			});
 			// Title of the topic
-			titleEl = $('<div class="topic-title">' + topic.topictitle + '</div>'),
+			titleEl = $('<div class="topic-title">' + topic.topictitle + '</div>');
 			// Loop over responses of each topic and give them a class accoarding to their depth
 			// to help style the response to visualize the nesting of comments
 			responses = topic.responses;
@@ -37,21 +45,27 @@ $(function() {
 		});
 	}
 
+	/**
+	 * Add a reply for a specific user posting
+	 * @param {Event} event fired by the clicked button
+	 */
 	function addReply(event) {
 		// TODO: Display replies in the correct order, from oldest to newest
 		// It's currently showing newest replies first
-		var replyButton = event.target,
+		var replyButton, parentId, id, age, depth, author,
+											textId, content, response, responseEl;
+		replyButton = event.target;
 		// TODO: Throw error if reply textarea is empty, or activate reply button only if there's text
-		parentId = replyButton.id,
-		id = ++lastId,
+		parentId = replyButton.id;
+		id = ++lastId;
 		// Set age to 1 second
 		// TODO: Get time at reply time, then calculate age when sending reply back to server
-		age = secondsToHMS(1),
-		depth = $(replyButton).data('depth') + 1,
+		age = secondsToHMS(1);
+		depth = $(replyButton).data('depth') + 1;
 		//TODO: Write a function to check current user and if they're authenticated
-		author = currentUser || "Anonymous",
-		textId = '#replytxt-'+ parentId,
-		response, responseEl,
+		author = currentUser || "Anonymous";
+		textId = '#replytxt-'+ parentId;
+
 		content = $(textId).val();
 
 		$(textId).val('');
@@ -68,15 +82,20 @@ $(function() {
 		responseEl = createResponseEl(response);
 		responseEl.insertAfter($('#replyto-' + parentId));
 	}
-
+	/**
+	 * Construct response HTML element from the response object
+	 * @param {Object} response a user's response to another user's response
+	 * or to a certain topic
+	 */
 	function createResponseEl(response) {
-		var id = response.id,
-		parentId = response.parentid,
-		depth = response.depth,
-		age =  secondsToHMS(response.age),
-		author = response.author,
-		content = response.posttext,
-		responseEl;
+		var id, parentId, depth, age, author, content, responseEl;
+
+		id = response.id;
+		parentId = response.parentid;
+		depth = response.depth;
+		age =  secondsToHMS(response.age);
+		author = response.author;
+		content = response.posttext;
 
 		// Create a response div with it's is set to the id number retrieved,
 		// and setting a data attribute to hold the parent id.
@@ -104,29 +123,41 @@ $(function() {
 		return responseEl;
 	}
 
-	// Used to convert age which is in seconds to a text timestamp
-	// TODO: Look for a jQuery plugin to calculate this
+	/**
+	 * Used to convert age which is in seconds to a text timestamp
+	 * TODO: Look for a jQuery plugin to calculate this
+	 * @param {number} seconds represents the age of certain response,
+	 * indicating how long ago it was posted
+	 */
 	function secondsToHMS(seconds) {
-		var d = Math.floor(seconds / 60 / 60 / 24),
-				h = Math.floor(seconds / 60 / 60) % 24,
-				m = Math.floor(seconds / 60) % 60,
-				s = seconds % 60,
-				timestampTxt = "";
-			if(d) {
-				timestampTxt += d + " days ago";
-			}
-			else if(h) {
-				timestampTxt += h + " hours ago";
-			}
-			else if(m) {
-				timestampTxt += m + " minutes ago";
-			}
-			else if(s) {
-				timestampTxt += "less than a minute ago";
-			}
+		var d, h, m, s, timestampTxt;
+
+		d = Math.floor(seconds / 60 / 60 / 24);
+		h = Math.floor(seconds / 60 / 60) % 24;
+		m = Math.floor(seconds / 60) % 60;
+		s = seconds % 60;
+		timestampTxt = "";
+
+		if(d) {
+			timestampTxt += d + " days ago";
+		}
+		else if(h) {
+			timestampTxt += h + " hours ago";
+		}
+		else if(m) {
+			timestampTxt += m + " minutes ago";
+		}
+		else if(s) {
+			timestampTxt += "less than a minute ago";
+		}
 		return timestampTxt;
 	}
 
+	/**
+	 * General click handler to handle all click events on the container,
+	 * and filters what we want to handle
+	 * @param {Event} event
+	 */
 	function handleClick(event) {
 		var target = event.target;
 		if( $(target).hasClass(REPLY_BUTTON_CLASS)) {
