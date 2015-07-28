@@ -1,0 +1,178 @@
+{
+	"topics" : [
+		{
+			"topictitle": "Category intersections by CatScan or wikisearch incategory",
+			"subscribed" : 0,
+			"publictags" : [],
+			"privatetags" : [],
+			"responses" : [
+
+				{
+
+		 			"id": 131,
+		 			"parentid": 0,
+		 			"depth": 0,
+		 			"age": "27483",
+		 			"author": "Wikid77",
+		 			"posttext": "<p>Hence, among the 685 pages in \"<a>:Category:People from Queens</a>\" (NYC), this palenotologist's name was matched, as \"<a>Stephen Jay Gould</a>\". Although the wikisearch categories do not also scan the related sub-categories, there is a <a>wp:Toolserver</a> tool, <a>wp:CatScan</a> to scan for articles which also match within the sub-categories. Those features seem to handle over 90% of what people have requested for category-intersection lists. -</p>"
+				},
+				{
+
+		 			"id": 132,
+		 			"parentid": 131,
+		 			"depth": 1,
+		 			"age": "14463",
+		 			"author": "FormerIP",
+		 			"posttext": "<p>I had no idea the search allowed you to do that. Presumably, it would be relative child's play to set up a form (?) </p>"
+				},
+				{
+
+		 			"id": 133,
+		 			"parentid": 131,
+		 			"depth": 1,
+		 			"age": "14883",
+		 			"author": "GabrielF",
+		 			"posttext": "<p>One feature that would be nice would be a NOT operator so you could search for articles that were in category A but not in category B. A use case would be to easily add articles to WikiProjects. It would be nice to be able to generate a list of articles in <a>:Category:2000 novels</a> but not in <a>:Category:WikiProject Novels articles</a>. I could easily add the articles in this list to WikiProject Novels. </p>"
+				},
+				{
+
+		 			"id": 134,
+		 			"parentid": 131,
+		 			"depth": 1,
+		 			"age": "903",
+		 			"author": "Carcharoth",
+		 			"posttext": "<p>I have a vague memory of when the search interface was updated to include such things. I've used the \"intitle\" search operator for some time, but not many people seemed to have noticed the changes. It might be worth pinpointing when the changes was made, and also notifying the people elsewhere on this talk page and in other places who are in uproar about the categorisation system. Those who have any experience with the categorisation system (I did for a few years about five years ago) are probably a bit shocked at how many people don't really follow how it works at all, and the amount of misunderstanding going on around this. </p>"
+				}
+			]
+		},
+		{
+			"topictitle": "Diet",
+			"subscribed" : 0,
+			"publictags" : [],
+			"privatetags" : [],
+			"responses" : [
+				{
+
+		 			"id": 3,
+		 			"parentid": 0,
+					"depth": 0,
+					"age": "249960",
+					"author": "The Devil's Advocate",
+					"posttext": "<p>The article says: \"The giant panda has a diet which is 99 percent bamboo.\" It's extremely unlikely to be exactly 99 percent... Anyone have more precise statistics?</p>"
+				},
+				{
+
+		 			"id": 4,
+		 			"parentid": 3,
+					"depth": 1,
+					"age": "249762",
+					"author": "Delicious Carbuncle",
+					"posttext": "<p>I can't imagine any number being accurate across a large population. There's got to be a fair bit of variation. Perhaps in place of \"99 percent\" it would be appropriate to say \"the giant panda has a diet which is mostly bamboo.\"</p>"
+				},
+
+				{
+
+		 			"id": 5,
+		 			"parentid": 4,
+					"depth": 2,
+					"age": "249362",
+					"author": "Bearnard",
+					"posttext": "<p>Why do pandas eat more bamboo than everything else put together? Most bears are carnivorous.</p>"
+				},
+
+				{
+
+		 			"id": 6,
+		 			"parentid": 5,
+					"depth": 3,
+					"age": "249262",
+					"author": "Delicious Carbuncle",
+					"posttext": "<p>Meat tastes bad for them. An example of how taste buds alone can influence evolution. Bears are omnivorous. All bear species can eat meat or plants; so can pandas. All bear species have stomachs designed for eating meat or plants. However, years of living in a meat-based food only environment (Arctic and Polar bears) or plant-based food only environment (forest and Panda bears) has made their stomachs accostumed to a specific diet.</p>"
+				},
+
+				{
+
+		 			"id": 7,
+		 			"parentid": 6,
+					"depth": 4,
+					"age": "249162",
+					"author": "YogiB",
+					"posttext": "<p>To use \"99 percent\" to imply \"almost exclusively\" is OK in speech, but should not be abused in an encyclopedia. Here, numbers should have their literal meaning.</p>"
+				},
+
+				{
+
+		 			"id": 8,
+		 			"parentid": 7,
+					"depth": 5,
+					"age": "248562",
+					"author": "EthicsGradient",
+					"posttext": "<p>\"Almost exclusively\" or \"a diet dominated by bamboo\" is much better, both due to the considerations above, and because I've had a hard time seeing the point in listing a number of other food-types if they only constitute a measly 1 percent. If no one objects, I'll make the change.</p>"
+				},
+				{
+
+		 			"id": 9,
+		 			"parentid": 7,
+		 			"depth": 5,
+		 			"age": "248462",
+		 			"author": "AndyTheGrump",
+		 			"posttext": "<p>Pandas eat beetles or small insects when not bamboo.</p>"
+				},
+				{
+
+		 			"id": 10,
+		 			"parentid": 3,
+		 			"depth": 1,
+		 			"age": "224222",
+		 			"author": "Johnpacklambert",
+		 			"posttext": "<p>In the classification section it is stated that the panda's closest relative is the Spectacled Bear. Unfortunately I don't have direct access to the paper on molecular phylogeny of the bears However, what I've been able to find online suggests pandas are sister to the rest of the bear clade, with Spectacled Bears being the next split on the tree. This looks like a multi-gene phylogeny of the group with all of them saying the same thing.</p>"
+				},
+				{
+
+		 			"id": 11,
+		 			"parentid": 10,
+		 			"depth": 2,
+		 			"age": "82082",
+		 			"author": "Burkehart",
+		 			"posttext": "<p>If the giant panda and the red pandy are in completely different families, and they both have pseudo-thumbs, can the pseudo-thumb accurately be called unique? I know it's a nit, but it bugged me when I read it.</p>"
+				},
+				{
+
+		 			"id": 12,
+		 			"parentid": 10,
+		 			"depth": 2,
+		 			"age": "223862",
+		 			"author": "Johnpacklambert",
+		 			"posttext": "<p>This article, citing a dead link as a source, indicates that the panda's historical habitat was western and southwestern China. According to the World Wildlife Fund, it's central and southeastern China. I'm inclined to believe the latter.</p>"
+				},
+				{
+
+		 			"id": 13,
+		 			"parentid": 3,
+		 			"depth": 1,
+		 			"age": "217322",
+		 			"author": "Johnpacklambert",
+		 			"posttext": "<p>I've updated the description of its present range in the lead, and added info on its historical range in the Conservation section.</p>"
+				},
+				{
+
+		 			"id": 14,
+		 			"parentid": 13,
+		 			"depth": 2,
+		 			"age": "70202",
+		 			"author": "Obiwankenobi",
+		 			"posttext": "<p>In this article under Classification there should be more stated to why red pandas and giant pandas are not as related through an evolutionary stand point. Another thing the article could present is under Diet it can mention how 7 out of 13 taxonomic units are unique to pandas that to other mammals. Under Subspecies it can be added that 0.3 million years ago a bottleneck occurred that caused the pygmy panda to be replaced by another subspecites -- baconi panda that had a larger body mass (Chinese Scientists Discover Evidence of Giant Panda's Population History and Local Adaptation by Whole Genome Resequencing).</p>"
+				},
+				{
+
+		 			"id": 15,
+		 			"parentid": 3,
+		 			"depth": 1,
+		 			"age": "189122",
+		 			"author": "Johnpacklambert",
+		 			"posttext": "<p>Under subspecies it says, \"Two subspecies of giant panda have been recognized.\" In 2012, three have been recognized. </p>"
+				}
+			]
+		}
+	]
+}

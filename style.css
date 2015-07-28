@@ -1,0 +1,68 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #444444;
+}
+
+.container {
+	border-top: 1px #ccc solid;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.topic-container {
+	padding-bottom: 1em;
+	border-bottom: 1px #ccc solid;
+}
+.topic-title {
+	font-size: 2em;
+	margin: 1em 0 0.5em;
+}
+textarea.replytext {
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px #ccc solid;
+	padding: 1em 0 0 1em;
+	font-size: 1em;
+	resize: vertical;
+}
+
+.response-container {
+	border: 1px #0c53d7 solid;
+}
+.author {
+	background-color: #0c53d7;
+	color: white;
+	padding: 1em;
+}
+.date-stamp {
+	float: right;
+}
+.response-container p {
+	padding: 1em;
+}
+
+.replyto {
+	position: relative;
+}
+.reply-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 60px;
+	height: 40px;
+	background-color: #444444;
+	color: white;
+	border: none;
+}
+
+.depth-0 {margin-left: 0px;}
+.depth-1 {margin-left: 10px;}
+.depth-2 {margin-left: 20px;}
+.depth-3 {margin-left: 30px;}
+.depth-4 {margin-left: 40px;}
+.depth-5 {margin-left: 50px;}
+.depth-6 {margin-left: 60px;}
+.depth-7 {margin-left: 70px;}
+.depth-8 {margin-left: 80px;}
+.depth-9 {margin-left: 90px;}
+.depth-10 {margin-left: 100px;}
